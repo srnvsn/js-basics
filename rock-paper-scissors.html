@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<button onclick="
+score.wins = 0;
+score.losses = 0;
+score.ties = 0;
+alert('Score Reset');
+">
+Reset
+</button>
+
+<button onclick="
+let computermove = Math.random();
+
+if (computermove <= 0.33) {
+    score.wins++;
+    alert(`You Win!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+else if (computermove <= 0.66) {
+    score.ties++;
+    alert(`You Tie!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+else {
+    score.losses++;
+    alert(`You Lose!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+">
+Rock
+</button>
+
+<button onclick="
+let computermove = Math.random();
+
+if (computermove <= 0.33) {
+    score.losses++;
+    alert(`You Lose!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+else if (computermove <= 0.66) {
+    score.wins++;
+    alert(`You Win!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+else {
+    score.ties++;
+    alert(`You Tie!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+">
+Paper
+</button>
+
+<button onclick="
+let computermove = Math.random();
+
+if (computermove <= 0.33) {
+    score.losses++;
+    alert(`You Lose!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+else if (computermove <= 0.66) {
+    score.ties++;
+    alert(`You Tie!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+else {
+    score.wins++;
+    alert(`You Win!
+
+Wins: ${score.wins}
+Losses: ${score.losses}
+Ties: ${score.ties}`);
+}
+">
+Scissors
+</button>
+
+<script>
+const score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+};
+</script>
+
+</body>
+</html>
