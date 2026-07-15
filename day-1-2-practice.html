@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+            const student=[{
+                name:"hemesh",
+                age:19,
+                department:"cse",
+                cgpa:8.98},
+
+              {   name:"ajay",
+                age:20,
+                department:"ece",
+                cgpa:8.90},
+
+               {  name:"Srinivasan",
+                age:19,
+                department:"cse",
+                cgpa:8.98},
+            ];
+
+
+            for(let i=0;i<student.length;i++){
+                console.log(student[i].name);
+            }
+            let highest=student[0].cgpa;
+for (let i=0;i<student.length;i++){
+    if (student[i].cgpa>highest)
+{highest=student[i].cgpa;}
+    
+}
+
+console.log(highest);
+            
+        </script>
+    </body>
+</html>
